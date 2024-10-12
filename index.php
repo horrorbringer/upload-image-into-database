@@ -18,6 +18,7 @@
       include_once("connect.php");
       $query = "SELECT * FROM Images";
       $result = mysqli_query($conn, $query);
+      echo "<a class='btn btn-info mb-4' href='create.php'>Add New </a>";
       if($result->num_rows>0){
         while($row = mysqli_fetch_array($result)){
           $name = $row["image_name"];

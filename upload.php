@@ -12,6 +12,7 @@ if($_POST["submit"]){
             $query = "INSERT INTO Images (image_name,file_name) VALUE ('$fullName','$fileName')";
             if(mysqli_query($conn,$query)){
                 echo "Your image is inserted";
+                header("Location: ./index.php");
             }else {
                 echo "Can't insert this image";
             }
